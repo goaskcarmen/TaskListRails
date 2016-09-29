@@ -1,6 +1,6 @@
 <h1>Create a Task</h1>
 
-<form name="new-task" action="create" method="task">
+<form name="new-task" action="create" method="post">
 
   <label for="name">Name: </label>
   <input type="text" name="name" id="name">
@@ -14,10 +14,14 @@
     <option value="incomplete">Incomplete</option>
     <option value="on-going">On-going</option>
   </select>
-  
+
   <label for="completion_date">Completion Date: </label>
   <input type="text" name="completion_date" id="completion_date">
 
+  <%= tag(:input, :type => "hidden",
+      :name => request_forgery_protection_token.to_s,
+      :value => form_authenticity_token) %>
+      
   <button type="submit">Submit</button>
 
 </form>

@@ -4,9 +4,12 @@
     <ul>
       <li>
         <%= link_to(task[:name], show_path(task[:id])) %>
-        <button><%= link_to("Delete Task", destroy_path(task[:id])) %></button>
+        <button><%= link_to("Delete Task", destroy_path(task[:id]), data: { confirm: "Are you sure?" }, method: :delete) %></button>
       </li>
     </ul>
   <% end %>
 
   <button><%= link_to("Create a New Task", new_path) %></button>
+
+
+<!-- link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" } -->

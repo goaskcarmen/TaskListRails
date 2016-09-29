@@ -22,9 +22,9 @@ class TasksController < ApplicationController
   def create
     @params = params
 
-    newTask = Task.new({name: params[:name], description: params[:description], status: params[:status], completion_date: params[:completion_date]})
+    @newTask = Task.new({name: params[:name], description: params[:description], status: params[:status], completion_date: params[:completion_date]})
 
-    newTask.save
+    @newTask.save
   end
 
   def new
