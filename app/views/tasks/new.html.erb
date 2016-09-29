@@ -1,0 +1,23 @@
+<h1>Create a Task</h1>
+
+<form name="new-task" action="create" method="task">
+
+  <label for="name">Name: </label>
+  <input type="text" name="name" id="name">
+
+  <label for="description">Description: </label>
+  <textarea name="description" id="description" rows="5" cols="30"></textarea>
+
+  <label for="status">Status: </label>
+  <select name="status" id="status">
+    <option value="complete">Complete</option>
+    <option value="incomplete">Incomplete</option>
+    <option value="on-going">On-going</option>
+  </select>
+  
+  <label for="completion_date">Completion Date: </label>
+  <input type="text" name="completion_date" id="completion_date">
+
+  <button type="submit">Submit</button>
+
+</form>

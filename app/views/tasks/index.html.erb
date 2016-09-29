@@ -1,0 +1,12 @@
+<h1>All Tasks</h1>
+
+  <% @tasks.each do |task| %>
+    <ul>
+      <li>
+        <%= link_to(task[:name], show_path(task[:id])) %>
+        <button><%= link_to("Delete Task", destroy_path(task[:id])) %></button>
+      </li>
+    </ul>
+  <% end %>
+
+  <button><%= link_to("Create a New Task", new_path) %></button>
