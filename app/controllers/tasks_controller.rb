@@ -28,10 +28,7 @@ class TasksController < ApplicationController
 
     self.edit
 
-    @mytask.name = params[:task][:name]
-    @mytask.description = params[:task][:description]
-    @mytask.status = params[:task][:status]
-    @mytask.completion_date = params[:task][:completion_date]
+    @mytask.update({name: params[:task][:name], description: params[:task][:description], status: params[:task][:status], completion_date: params[:task][:completion_date]})
   end
 
   def destroy

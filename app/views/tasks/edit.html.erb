@@ -1,55 +1,26 @@
-<h1>Edit a Task</h1>
-<section>
+<div class="task-container">
+  <div class="task">
+    <h2 class="create-task-header">Edit a Task</h2>
+      <p>
+        <%= form_for @mytask, url: update_path, method: :put do |f| %>
+          <ul class="create-task-list">
+            <li><%= f.label :name %></li>
+            <li><%= f.text_field :name %></li>
 
-  <form name="updated-task" action="update" method="post">
-    <input type="hidden" name="_method" value="PUT">
+            <li><%= f.label :description %></li>
+            <li><%= f.text_area :description, cols: 40, rows: 10  %></li>
 
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="name" value="<%= @mytask[:name] %>">
+            <li><%= f.label :status %></li>
+            <li><%= f.select :status, [["Complete", "complete"], ["Incomplete", "incomplete"], ["On-going", "on-going"]] %></li>
 
-    <label for="description">Description: </label>
-    <textarea name="description" id="description" value="<%= @mytask[:description] %>" rows="10" cols="50"></textarea>
+            <li><%= f.label :completion_date %></li>
+            <li><%= f.text_field :completion_date %></li>
+          </ul>
 
-    <label for="status">Status: </label>
-    <select name="status" id="status" value="<%= @mytask[:status] %>">
-      <option value="complete">Complete</option>
-      <option value="incomplete">Incomplete</option>
-      <option value="on-going">On-going</option>
-    </select>
+          <div class="create-task-button"><%= f.submit %></div>
 
-    <label for="completion_date">Completion Date: </label>
-    <input type="text" name="completion_date" id="completion_date" value="<%= @mytask[:completion_date] %>">
+        <% end %>
+      </p>
 
-    <%= tag(:input, :type => "hidden",
-        :name => request_forgery_protection_token.to_s,
-        :value => form_authenticity_token) %>
-
-     <button type="submit">Submit</button>
-
-  </form>
-
-  <%#= form_for @mytask, url: update_path do |f| %>
-    <%#= f.label :name %>
-    <%#= f.text_field :task, :name %>
-
-    <%#= f.label :description %>
-    <%#= f.text_area :task, :description, cols: 40, rows: 10  %>
-
-    <%#= f.label :status %>
-    <%#= f.select :status, [["Complete", "complete"], ["Incomplete", "incomplete"], ["On-going", "on-going"]] %>
-
-    <!-- <select name="task[status]" id="task_status" value="@mytask.status">
-      <option value="complete">Complete</option>
-      <option value="incomplete">Incomplete</option>
-      <option value="on-going">On-going</option>
-    </select> -->
-
-    <%# f.text_field :status %>
-
-    <%#= f.label :completion_date %>
-    <%#= f.text_field :task, :completion_date %>
-
-    <%#= f.submit %>
-
-  <%# end %>
-</section>
+  </div>
+</div>

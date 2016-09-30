@@ -6,7 +6,8 @@
         <ul>
           <li>
             <%= link_to(task[:name], show_path(task[:id])) %>
-            <button><%= link_to("Edit Task", edit_path(task[:id]), method: :put) %></button>
+            <button><%= link_to("Edit Task", edit_path(task[:id])) %></button>
+            <button><%= link_to("Task Complete") %></button>
             <button><%= link_to("Delete Task", destroy_path(task[:id]), data: { confirm: "Are you sure?" }, method: :delete) %></button>
           </li>
         </ul>
