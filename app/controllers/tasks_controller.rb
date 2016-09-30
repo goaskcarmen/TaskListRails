@@ -36,4 +36,15 @@ class TasksController < ApplicationController
     Task.find(num).destroy
   end
 
+  def complete
+    self.edit
+
+    @mytask.status = "complete"
+    @mytask.completion_date = Time.now
+    @mytask.save
+
+    redirect_to action: "index"
+
+  end
+
 end

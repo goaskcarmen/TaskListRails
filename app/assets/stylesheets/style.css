@@ -28,15 +28,24 @@ header h1{
 
 button{
   padding: 0.5rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  background-color: #BBDEFB;
+  border-color: #616161;
 }
 
 button:hover{
   border-color: #448AFF;
 }
 
-a:hover{
+a:visited{
+  color: #212121;
+}
+ 
+a:hover, a:active, a:link{
   color: #448AFF;
 }
+
 
 /*********** index styling ***************/
 .all-tasks-header{
