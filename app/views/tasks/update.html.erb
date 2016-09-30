@@ -1,2 +1,8 @@
-<h1>Tasks#update</h1>
-<p>Find me in app/views/tasks/update.html.erb</p>
+<h1>your task has been updated</h1>
+
+<p>Name: <%= @mytask.name %></p>
+<p>Description: <%= @mytask.description %></p>
+<p>Status: <%= @mytask.status %></p>
+<p>Completion Date: <%= @mytask.completion_date %></p>
+
+<button><%= link_to("Back to Home", index_path) %></button>
