@@ -64,4 +64,9 @@ In this wave we will extend the interactivity with users, allowing them to edit 
   - DRY up your code by reusing the view code from the `new` functionality
     - Hint: Rendering _partials_ in Rails.
 
+## Reflection
 
+- what are you still working on understanding better?
+  - When I created the complete button and the associated method in the controller, I had to create a complete.html.erb page even though it was blank. The complete method re-direct back to the index/current page. I would like to know how to achieve the same goal without creating the complete.html.erb page. 
+- what did your chair pair do differently?
+  - My chair pair had this concept to create two different models with completed tasks and incompleted tasks. 
