@@ -34,6 +34,7 @@ class TasksController < ApplicationController
   def destroy
     num = params[:id].to_i
     Task.find(num).destroy
+    redirect_to action: "index"
   end
 
   def complete
