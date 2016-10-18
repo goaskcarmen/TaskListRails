@@ -1,0 +1,71 @@
+/* stylesheet */
+body{
+  font-family: sans-serif;
+  color: #212121;
+  background-color: #E3F3FD;
+  margin: 0;
+}
+
+.task-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.task{
+  border-radius: 2px;
+	background-color: #FAFAFA;
+	color: #263238;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	width: 30rem;
+	min-width: 20rem;
+  padding: 2rem;
+}
+
+header h1{
+  text-align: center;
+}
+
+button{
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  background-color: #BBDEFB;
+  border-color: #616161;
+}
+
+button:hover{
+  border-color: #448AFF;
+}
+
+a:visited{
+  color: #212121;
+}
+ 
+a:hover, a:active, a:link{
+  color: #448AFF;
+}
+
+
+/*********** index styling ***************/
+.all-tasks-header{
+  text-align: center;
+}
+
+.button-position{
+  float: right;
+}
+
+/*********** Create task styling *********/
+.create-task-header{
+  text-align: center;
+}
+
+.create-task-list{
+  line-height: 1.5rem;
+  list-style-type: none;
+}
+
+.create-task-button{
+  text-align: center;
+}

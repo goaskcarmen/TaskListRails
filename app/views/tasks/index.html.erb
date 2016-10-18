@@ -1,15 +1,28 @@
-<h1>All Tasks</h1>
+<div class="task-container">
+  <div class="task">
+    <h3 class="all-tasks-header">All Tasks</h3>
 
-  <% @tasks.each do |task| %>
-    <ul>
-      <li>
-        <%= link_to(task[:name], show_path(task[:id])) %>
-        <button><%= link_to("Delete Task", destroy_path(task[:id]), data: { confirm: "Are you sure?" }, method: :delete) %></button>
-      </li>
-    </ul>
-  <% end %>
+      <% @tasks.each do |task| %>
+        <ul>
+          <li>
+            <%= link_to(task[:name], show_path(task[:id])) %>
 
-  <button><%= link_to("Create a New Task", new_path) %></button>
+            <% if task[:status] == "complete" %>
+              <%= "👍" %>
 
+            <% else %>
+              <button><%= button_to("Edit Task", edit_path(task[:id]), method: :get) %></button>
+              <button><%= button_to("Complete", complete_path(task[:id]), method: :patch) %></button>
+            <% end %>
 
-<!-- link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" } -->
+            <button><%= button_to("Delete Task", destroy_path(task[:id]), data: { confirm: "Are you sure?" }, method: :delete) %></button>
+          </li>
+        </ul>
+      <% end %>
+
+      <div>
+        <button class="button-position"><%= link_to("Create a New Task", new_path) %></button>
+      </div>
+
+  </div>
+</div>
