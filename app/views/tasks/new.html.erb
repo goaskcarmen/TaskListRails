@@ -27,7 +27,7 @@
 
     </form> -->
 
-    <p>
+    <!-- <p>
       <%= form_for @mytask, url: create_path do |f| %>
         <ul class="create-task-list">
           <li><%= f.label :name %></li>
@@ -37,7 +37,7 @@
           <li><%= f.text_area :description, cols: 40, rows: 10  %></li>
 
           <li><%= f.label :status %></li>
-          <li><%= f.select :status, [["Complete", "complete"], ["Incomplete", "incomplete"], ["On-going", "on-going"]] %></li>
+          <li><%= f.select :status, [["Complete", "complete"], ["Incomplete", "incomplete"], ["On-going", "on-going"]] %></li> -->
 
           <!-- <select name="task[status]" id="task_status">
             <option value="complete">Complete</option>
@@ -45,14 +45,17 @@
             <option value="on-going">On-going</option>
           </select> -->
 
-          <li><%= f.label :completion_date %></li>
+          <!-- <li><%= f.label :completion_date %></li>
           <li><%= f.text_field :completion_date %></li>
         </ul>
 
         <div class="create-task-button"><%= f.submit %></div>
 
       <% end %>
-    </p>
+    </p> -->
+
+    <%#= render partial: "form" %>
+    <%= render partial: "form", locals: {action_name: "create"} %>
 
     <button><%= link_to("Back to Home", index_path) %></button>
   </div>
