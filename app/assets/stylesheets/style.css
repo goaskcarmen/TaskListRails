@@ -32,16 +32,36 @@ button{
   border-radius: 50%;
   background-color: #BBDEFB;
   border-color: #616161;
+  text-decoration: none;
+}
+
+.button_to input {
+  background-color: transparent;
+  border: none;
+  color: #222222;
+}
+
+.button_to input:hover {
+  color: #ff0000;
+}
+
+.button-position a {
+  text-decoration: none;
+}
+
+.button-position a:hover {
+  color: #FF0000;
 }
 
 button:hover{
   border-color: #448AFF;
+  color: #FF0000;
 }
 
 a:visited{
   color: #212121;
 }
- 
+
 a:hover, a:active, a:link{
   color: #448AFF;
 }

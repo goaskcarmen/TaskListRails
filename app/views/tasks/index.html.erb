@@ -6,6 +6,8 @@
         <ul>
           <li>
             <%= link_to(task[:name], show_path(task[:id])) %>
+            <!-- custom view helper in app/helpers/application_helper.rb -->
+            <%= readable_date(task.created_at) %>
 
             <% if task[:status] == "complete" %>
               <%= "👍" %>

@@ -1,0 +1,23 @@
+<h1> Add a Task </h1>
+<article>
+  <%#= form_for @mytask, url: @path, method: @method do |f| %>
+  <%= form_for @mytask, url: action_name do |f| %>
+
+    <ul class="create-task-list">
+      <li><%= f.label :name %></li>
+      <li><%= f.text_field :name %></li>
+
+      <li><%= f.label :description %></li>
+      <li><%= f.text_area :description, cols: 40, rows: 10  %></li>
+
+      <li><%= f.label :status %></li>
+      <li><%= f.select :status, [["Incomplete", "incomplete"], ["On-going", "on-going"], ["Complete", "complete"]] %></li>
+
+      <li><%= f.label :completion_date %></li>
+      <li><%= f.text_field :completion_date %></li>
+    </ul>
+
+    <div class="create-task-button"><%= f.submit %></div>
+
+  <% end %>
+</article>

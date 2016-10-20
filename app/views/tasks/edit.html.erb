@@ -1,7 +1,7 @@
 <div class="task-container">
   <div class="task">
     <h2 class="create-task-header">Edit a Task</h2>
-      <p>
+      <!-- <p>
         <%= form_for @mytask, url: update_path, method: :put do |f| %>
           <ul class="create-task-list">
             <li><%= f.label :name %></li>
@@ -20,7 +20,11 @@
           <div class="create-task-button"><%= f.submit %></div>
 
         <% end %>
-      </p>
+      </p> -->
+
+      <%#= render partial: "form" %>
+      <%= render partial: "form", locals: {action_name: "update"} %>
+
       <button><%= link_to("Back to Home", index_path) %></button>
   </div>
 </div>

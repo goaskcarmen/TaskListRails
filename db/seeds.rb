@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+myTask = Task.new(name: "My Title", description: "Something")
+myTask.save
+
+myTask.errors.each do |attribute, message|
+  puts "#{attribute}: #{message}"  # This message will print out in the terminal by running "rake db:seed"
+  Rails.logger.error "#{attribute}: #{message}" # This will print out in the log file. 
+end

@@ -8,6 +8,8 @@ class TasksController < ApplicationController
   end
 
   def create
+    # @path = "create_path"
+    # @method = :post
     @params = params
 
     @mytask = Task.new({name: params[:task][:name], description: params[:task][:description], status: params[:task][:status], completion_date: params[:task][:completion_date]})
@@ -21,6 +23,8 @@ class TasksController < ApplicationController
 
   def edit
     @mytask = Task.find(params[:id].to_i)
+    # @path = "update_path"
+    # @method = :get
   end
 
   def update

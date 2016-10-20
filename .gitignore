@@ -33,3 +33,8 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+##### ADDED ITEM ########
+# Hide the .env. It's full of secrets!
+/.env
+##### ADDED ITEM ########
