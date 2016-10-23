@@ -11,6 +11,13 @@
 <body>
   <header>
     <h1><%= link_to("Tasksheet", index_path) %></h1>
+
+      <% if current_user %>
+        <p>Welcome <%= current_user.name %></p>
+        <p><%= link_to("Log out", sessions_destroy_path) %><p>
+      <% else %>
+        <p><%= link_to("Log In with Github", "/auth/github") %><p>
+      <% end %>
   </header>
 
     <%= yield %>
