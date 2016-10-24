@@ -22765,3 +22765,357 @@ ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/
   Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-23 20:53:32 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  before_action :find_task only: [:show, :edit, :update, :complete]
+                               ^:
+  app/controllers/tasks_controller.rb:2:in `'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.7) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.7) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.7) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/137011a78161c113/variables" for ::1 at 2016-10-23 20:53:32 -0700
+
+
+Started GET "/" for ::1 at 2016-10-23 20:54:03 -0700
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/style.self-f4665a0846c64185d48fbc3ec23a0bf05404dc9eac6e26c8dd2c9b5d72f09dfb.css?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/app/assets/stylesheets/style.css" for ::1 at 2016-10-23 20:54:03 -0700
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/style.css"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.5ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-23 20:54:03 -0700
+
+
+Started GET "/app/assets/stylesheets/style.css" for ::1 at 2016-10-23 20:54:03 -0700
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/style.css"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.7ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.5ms)
+
+
+Started GET "/tasks/show/7" for ::1 at 2016-10-23 20:54:07 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-23 20:54:10 -0700
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-23 20:54:37 -0700
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/style.self-23086cc73e193550e7661504e9da7d52fa2f74266f56cec93c50262c5adda8ec.css?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/app/assets/stylesheets/style.css" for ::1 at 2016-10-23 20:54:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/style.css"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-23 20:54:38 -0700
+
+
+Started GET "/app/assets/stylesheets/style.css" for ::1 at 2016-10-23 20:54:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/stylesheets/style.css"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/CarmenChan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.6ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/CarmenChan/.rvm/gems/ruby-2.3.0@TaskListRails/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.3ms)
