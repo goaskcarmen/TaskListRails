@@ -14,9 +14,7 @@
 
       <% if current_user %>
         <p>Welcome <%= current_user.name %></p>
-        <p><%= link_to("Log out", sessions_destroy_path) %><p>
-      <% else %>
-        <p><%= link_to("Log In with Github", "/auth/github") %><p>
+        <p><%= link_to("Log out", sessions_destroy_path, method: :delete) %><p>
       <% end %>
   </header>
 

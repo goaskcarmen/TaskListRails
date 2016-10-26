@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
-  def self.build_from_github(auth_hash)
+  validates :email, :uid, :provider, presence: true
 
-    validates :email, :uid, :provider, presence: true
-
-    has_many :tasks
+  has_many :tasks
   
+  def self.build_from_github(auth_hash)
 
     # find or create a user based on the information in the auth_hash
     user = User.find_or_initialize_by(uid: auth_hash[:uid], provider: 'github')

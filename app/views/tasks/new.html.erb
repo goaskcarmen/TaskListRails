@@ -1,60 +1,7 @@
 <div class="task-container">
   <div class="task">
     <h2 class="create-task-header">Create a Task</h2>
-    <!-- <form name="new-task" action="create" method="post">
-
-      <label for="name">Name: </label>
-      <input type="text" name="name" id="name">
-
-      <label for="description">Description: </label>
-      <textarea name="description" id="description" rows="10" cols="50"></textarea>
-
-      <label for="status">Status: </label>
-      <select name="status" id="status">
-        <option value="complete">Complete</option>
-        <option value="incomplete">Incomplete</option>
-        <option value="on-going">On-going</option>
-      </select>
-
-      <label for="completion_date">Completion Date: </label>
-      <input type="text" name="completion_date" id="completion_date"> -->
-
-      <%#= tag(:input, :type => "hidden",
-          :name => request_forgery_protection_token.to_s,
-          :value => form_authenticity_token) %>
-
-      <!-- <button type="submit">Submit</button>
-
-    </form> -->
-
-    <!-- <p>
-      <%= form_for @mytask, url: create_path do |f| %>
-        <ul class="create-task-list">
-          <li><%= f.label :name %></li>
-          <li><%= f.text_field :name %></li>
-
-          <li><%= f.label :description %></li>
-          <li><%= f.text_area :description, cols: 40, rows: 10  %></li>
-
-          <li><%= f.label :status %></li>
-          <li><%= f.select :status, [["Complete", "complete"], ["Incomplete", "incomplete"], ["On-going", "on-going"]] %></li> -->
-
-          <!-- <select name="task[status]" id="task_status">
-            <option value="complete">Complete</option>
-            <option value="incomplete">Incomplete</option>
-            <option value="on-going">On-going</option>
-          </select> -->
-
-          <!-- <li><%= f.label :completion_date %></li>
-          <li><%= f.text_field :completion_date %></li>
-        </ul>
-
-        <div class="create-task-button"><%= f.submit %></div>
-
-      <% end %>
-    </p> -->
-
-    <%#= render partial: "form" %>
+    
     <%= render partial: "form", locals: {action_name: "create"} %>
 
     <button><%= link_to("Back to Home", index_path) %></button>

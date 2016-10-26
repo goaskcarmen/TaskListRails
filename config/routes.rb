@@ -3,24 +3,26 @@ Rails.application.routes.draw do
 
   root to: 'tasks#index', as: 'index'
   get 'sessions/create'
-  get 'sessions/destroy' => 'sessions#destroy'
+  delete 'sessions/destroy' => 'sessions#destroy'
+  get 'sessions/login'
 
-  get 'tasks/index' => 'tasks#index'
-
-  get 'tasks/show'
-
-  get 'tasks/show/:id' => 'tasks#show', as: 'show'
-
-  post 'tasks/create' => 'tasks#create', as: 'create'
-
-  get 'tasks/new' => 'tasks#new', as: 'new'
-
-  get 'tasks/:id/edit' => 'tasks#edit', as: 'edit'
-
-  put 'tasks/:id/update' => 'tasks#update', as: 'update'
-
-  delete 'tasks/:id/destroy' => 'tasks#destroy', as: 'destroy'
-
+  resources :tasks
+  # get 'tasks/index' => 'tasks#index'
+  #
+  # get 'tasks/show'
+  #
+  # get 'tasks/show/:id' => 'tasks#show', as: 'show'
+  #
+  # post 'tasks/create' => 'tasks#create', as: 'create'
+  #
+  # get 'tasks/new' => 'tasks#new', as: 'new'
+  #
+  # get 'tasks/:id/edit' => 'tasks#edit', as: 'edit'
+  #
+  # put 'tasks/:id/update' => 'tasks#update', as: 'update'
+  #
+  # delete 'tasks/:id/destroy' => 'tasks#destroy', as: 'destroy'
+  #
   patch 'tasks/:id/complete' => 'tasks#complete', as: 'complete'
 
 

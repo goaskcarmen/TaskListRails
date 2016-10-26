@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
-  before_action :find_task, only: [:show, :edit, :update, :complete]
+  before_action :find_task, only: [:show, :edit, :update, :complete, :destroy]
+  before_action :validate_user_tasks, only: [:show, :edit, :update, :complete, :destroy]
 
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks
   end
 
   def show
@@ -15,8 +16,10 @@ class TasksController < ApplicationController
     # @params = params
     # @mytask = Task.new({name: params[:task][:name], description: params[:task][:description], status: params[:task][:status], completion_date: params[:task][:completion_date]})
     @mytask = Task.new(task_params)
+    current_user.tasks << @mytask
+
     if @mytask.save
-      redirect_to create_path
+      redirect_to index_path
     else
       render :new
     end
@@ -33,18 +36,16 @@ class TasksController < ApplicationController
   end
 
   def update
-    @mytask.update(task_params)
     # @mytask.update({name: params[:task][:name], description: params[:task][:description], status: params[:task][:status], completion_date: params[:task][:completion_date]})
     if @mytask.update(task_params)
-      redirect_to update_path
+      redirect_to task_path
     else
       render :new
     end
   end
 
   def destroy
-    num = params[:id].to_i
-    Task.find(num).destroy
+    @mytask.destroy
     redirect_to action: "index"
   end
 
@@ -64,5 +65,11 @@ class TasksController < ApplicationController
 
   def find_task
     @mytask = Task.find(params[:id].to_i)
+  end
+
+  def validate_user_tasks
+    if !current_user.tasks.include? @mytask
+      raise ActionController::RoutingError.new('Not Found')
+    end
   end
 end

@@ -1,7 +1,7 @@
 <h1> Add a Task </h1>
 <article>
   <%#= form_for @mytask, url: @path, method: @method do |f| %>
-  <%= form_for @mytask, url: action_name do |f| %>
+  <%= form_for @mytask do |f| %>
 
     <ul class="create-task-list">
       <li><%= f.label :name %></li>
