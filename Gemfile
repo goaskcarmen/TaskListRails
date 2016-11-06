@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 # for OAuth github Authentication
 gem "omniauth"
 gem "omniauth-github"
+gem "omniauth-google-oauth2"
 
 gem "awesome_print"
 ######## ADDED GEMS #########

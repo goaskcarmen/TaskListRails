@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, only: [:create, :login]
 
   def login
-    
+
   end
 
   def create
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     return redirect_to root_path unless auth_hash['uid']
 
     # find the person in the database, if the person is new from the site, build the new user and save the user.
-   @user = User.find_by(uid: auth_hash[:uid], provider: 'github')
+   @user = User.find_by(uid: auth_hash[:uid], provider: auth_hash[:provider])
    if @user.nil?
      # User doesn't match anything in the DB.
      # Attempt to create a new user.
